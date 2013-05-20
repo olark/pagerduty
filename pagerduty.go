@@ -72,7 +72,6 @@ func (acct *account) Incidents(params map[string]string) (incidents []Incident, 
 		}
 		endpoint = fmt.Sprintf("%s?%s", endpoint, values.Encode())
 	}
-	fmt.Printf("endpoint: %s", endpoint)
 
 	if req, err = acct.getRequest(endpoint); err != nil {
 		return
